@@ -1,5 +1,9 @@
+// require('dotenv').config()
+import dotenv from 'dotenv'
+dotenv.config();
 import express from "express";
 import cors from "cors";
+import mongoose from "mongoose";
 import connectDB from "./controller/user_controller.js";
 import router from "./routes/user_routes.js";
 import taskRoutes from "./routes/taskRoute.js";
@@ -18,8 +22,9 @@ app.use("/mytask", taskRoutes);
 app.use("/", pathRouter)
 
 // MongoDB Connection
-app.listen(5000, () => {
-    console.log("ser id running on 5000 port");
-    
-})
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`server running on ${PORT} port`);
+});
 
