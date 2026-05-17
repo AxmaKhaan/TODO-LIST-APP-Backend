@@ -16,7 +16,8 @@ const app = express();
 // middle ware
 app.use(cors());
 app.use(cors({
-  origin: "https://todo-list-app-frontend-six.vercel.app/"
+  origin: "https://todo-list-app-frontend-git-main-axmakhaans-projects.vercel.app/",
+  credentials: true
 }))
 
 app.use(express.json());
