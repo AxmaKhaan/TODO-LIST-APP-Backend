@@ -16,7 +16,7 @@ const app = express();
 // middle ware
 app.use(
   cors({
-    origin: "https://todo-list-app-frontend-six.vercel.app/",
+    origin: "https://todo-list-app-frontend-six.vercel.app",
     credentials: true,
   })
 );
